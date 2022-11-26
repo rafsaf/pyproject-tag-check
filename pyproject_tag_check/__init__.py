@@ -10,11 +10,16 @@ def main():
         description="Verify version in pyproject.toml is not already used"
     )
     parser.add_argument(
-        "--repo_url",
+        "repo_url",
         help="Full URL to github repo that tag should be checked",
-        required=True,
+        type=str,
     )
-    parser.add_argument("pyproject_file", help="Path to pyproject.toml file")
+    parser.add_argument(
+        "--pyproject_file",
+        help="Path to pyproject.toml file",
+        default="pyproject.toml",
+        type=str,
+    )
     args = parser.parse_args()
 
     with open(args.pyproject_file, "r") as f:
