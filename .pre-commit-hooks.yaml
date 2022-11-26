@@ -1,0 +1,7 @@
+- id: pyproject-tag-check
+  name: pyproject-tag-check
+  description: Verify version in pyproject.toml is not already used
+  entry: pyproject-tag-check
+  language: python
+  pass_filenames: false
+  files: ^pyproject.toml$
