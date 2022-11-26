@@ -10,12 +10,8 @@ repos:
       - id: isort
 
   - repo: https://github.com/rafsaf/pyproject-tag-check
-    rev: "0.1.0"
+    rev: "0.2.0"
     hooks:
       - id: pyproject-tag-check
         args:
-          [
-            "--repo_url",
-            "https://github.com/rafsaf/pyproject-tag-check",
-            "pyproject.toml",
-          ]
+          - "https://github.com/rafsaf/pyproject-tag-check"

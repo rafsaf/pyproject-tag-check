@@ -18,4 +18,11 @@ repos:
 
 ```
 
-If tag 0.2.0 already exists like it does for https://github.com/rafsaf/pyproject-tag-check, the check will not pass.
+`pyproject.toml` usually looks like 
+
+```toml
+[tool.poetry]
+name = "some-name..."
+version = "0.1.0"
+```
+If tag 0.1.0 already exists like it does for https://github.com/rafsaf/pyproject-tag-check, the check will not pass.
