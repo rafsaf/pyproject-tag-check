@@ -13,10 +13,14 @@ repos:
     rev: "0.2.0"
     hooks:
       - id: pyproject-tag-check
+        always_run: true
         args:
           - https://github.com/rafsaf/pyproject-tag-check
 
 ```
+
+Use `always_run: true` if check should be performed always, otherwise it will run only when `pyproject.toml` is changed.
+
 
 `pyproject.toml` usually looks like 
 
