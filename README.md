@@ -10,7 +10,7 @@ Put it in `.pre-commit.config.yaml` repos and argument must be URL to repo on GH
 ```yml
 repos:
   - repo: https://github.com/rafsaf/pyproject-tag-check
-    rev: "0.2.0"
+    rev: "0.3.1"
     hooks:
       - id: pyproject-tag-check
         always_run: true

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pyproject-tag-check"
-version = "0.3.0"
+version = "0.3.1"
 description = "Verify version in pyproject.toml is not already used"
 authors = ["rafsaf <rafal.safin12@gmail.com>"]
 license = "MIT"
