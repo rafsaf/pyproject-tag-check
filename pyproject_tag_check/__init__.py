@@ -25,7 +25,17 @@ def main():
 
     with open(args.pyproject_file, "r") as f:
         pyproject_toml = toml.load(f)
-        version = pyproject_toml["tool"]["poetry"]["version"]
+        try:
+            version = pyproject_toml["project"]["version"]
+        except KeyError:
+            print("[project][version] not found")
+
+            try:
+                version = pyproject_toml["tool"]["poetry"]["version"]
+            except KeyError:
+                print("[tool][poetry][version] not found")
+                sys.exit(f"version key not found in {args.pyproject_file}")
+
     print(f"version from file {args.pyproject_file}: {version}")
 
     url = f"{args.repo_url}/releases/tag/{version}"
